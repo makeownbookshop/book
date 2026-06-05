@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>책방/독립서점/북카페 창업 및 운영 &lt;책방학개론&gt; PDF 무료로 받기</title>
+<meta name="description" content="독립서점, 책방, 북카페 운영에 관심있는 분들을 위한 무료 전자책 '책방학개론' PDF를 받아보세요. 더페이지솔루션이 제공하는 책방 창업 노하우.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700;900&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --green: #2ecc71;
+    --green-dark: #27ae60;
+    --green-glow: rgba(46, 204, 113, 0.18);
+    --bg: #1a1f1c;
+    --bg2: #222820;
+    --bg3: #1d2219;
+    --text: #f0ede6;
+    --text-muted: #a8a89a;
+    --border: rgba(255,255,255,0.08);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* ── 상단 배너 ── */
+  .top-banner {
+    background: var(--green);
+    color: #0d1a10;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+  }
+
+  /* ── 배경 텍스처 ── */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background:
+      radial-gradient(ellipse 60% 50% at 70% 50%, rgba(46,204,113,0.06) 0%, transparent 70%),
+      linear-gradient(160deg, #1d2d22 0%, #1a1f1c 40%, #151a12 100%);
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255,255,255,0.02) 39px, rgba(255,255,255,0.02) 40px),
+      repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255,255,255,0.02) 39px, rgba(255,255,255,0.02) 40px);
+    pointer-events: none;
+  }
+
+  .hero-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 80px 40px 80px;
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 60px;
+    align-items: center;
+  }
+
+  /* ── 왼쪽 텍스트 ── */
+  .hero-text {}
+
+  .hero-eyebrow {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: var(--green);
+    text-transform: uppercase;
+    border: 1px solid rgba(46,204,113,0.35);
+    border-radius: 2px;
+    padding: 4px 12px;
+    margin-bottom: 28px;
+  }
+
+  .hero-title {
+    font-family: 'Noto Serif KR', serif;
+    font-size: clamp(32px, 4vw, 52px);
+    font-weight: 700;
+    line-height: 1.35;
+    letter-spacing: -0.01em;
+    color: var(--text);
+    margin-bottom: 36px;
+    word-break: keep-all;
+  }
+
+  .hero-title .em {
+    color: var(--green);
+  }
+
+  .hero-body {
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.9;
+    margin-bottom: 40px;
+    word-break: keep-all;
+    max-width: 480px;
+  }
+
+  .hero-body strong {
+    color: var(--text);
+    font-weight: 500;
+  }
+
+  /* ── CTA 버튼 그룹 ── */
+  .btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 340px;
+  }
+
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 16px 28px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: 'Noto Sans KR', sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    letter-spacing: 0.01em;
+    border: none;
+  }
+
+  .btn-primary {
+    background: var(--green);
+    color: #0d1a10;
+    box-shadow: 0 4px 20px rgba(46,204,113,0.3);
+  }
+  .btn-primary:hover {
+    background: var(--green-dark);
+    box-shadow: 0 6px 28px rgba(46,204,113,0.45);
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    background: rgba(255,255,255,0.06);
+    color: var(--text);
+    border: 1px solid rgba(255,255,255,0.12);
+  }
+  .btn-secondary:hover {
+    background: rgba(255,255,255,0.10);
+    border-color: rgba(255,255,255,0.22);
+    transform: translateY(-2px);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--green);
+    border: 1.5px solid var(--green);
+  }
+  .btn-outline:hover {
+    background: var(--green-glow);
+    transform: translateY(-2px);
+  }
+
+  /* ── 오른쪽 PDF 미리보기 카드 ── */
+  .hero-card {
+    position: relative;
+  }
+
+  .pdf-preview {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow:
+      0 30px 80px rgba(0,0,0,0.6),
+      0 0 0 1px rgba(255,255,255,0.06),
+      inset 0 1px 0 rgba(255,255,255,0.9);
+    transform: perspective(1000px) rotateY(-4deg) rotateX(2deg);
+    transition: transform 0.4s ease;
+  }
+  .pdf-preview:hover {
+    transform: perspective(1000px) rotateY(-1deg) rotateX(0deg);
+  }
+
+  .pdf-header {
+    background: #f8f6f0;
+    padding: 28px 28px 20px;
+    border-bottom: 1px solid #e8e4dc;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+
+  .pdf-left {
+    padding-right: 20px;
+    border-right: 1px solid #e8e4dc;
+  }
+  .pdf-right {
+    padding-left: 20px;
+  }
+
+  .pdf-title-ko {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+  }
+  .pdf-subtitle {
+    font-size: 10px;
+    color: #5a3e9e;
+    font-weight: 600;
+    margin-bottom: 14px;
+    line-height: 1.6;
+  }
+
+  .pdf-bookstore-img {
+    width: 100%;
+    height: 130px;
+    background: linear-gradient(135deg, #2c3e30 0%, #1a2820 100%);
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .pdf-bookstore-inner {
+    text-align: center;
+    color: #aaa;
+  }
+
+  .pdf-bookstore-img::after {
+    content: '서점, 서행';
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    white-space: nowrap;
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+
+  .pdf-toc-title {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #5a3e9e;
+    margin-bottom: 16px;
+  }
+
+  .pdf-toc-list {
+    list-style: none;
+    font-size: 11px;
+    color: #444;
+    line-height: 1;
+  }
+
+  .pdf-toc-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 7px 0;
+    border-bottom: 1px dotted #ddd;
+    gap: 8px;
+  }
+
+  .pdf-toc-list li:last-child { border-bottom: none; }
+  .pdf-toc-list .pg { color: #999; flex-shrink: 0; }
+
+  .pdf-footer {
+    background: #f0ede5;
+    padding: 12px 20px;
+    font-size: 9px;
+    color: #999;
+    line-height: 1.6;
+  }
+
+  /* ── 구분선 ── */
+  .divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(46,204,113,0.3), transparent);
+    margin: 0;
+  }
+
+  /* ── 본문 섹션 공통 ── */
+  section {
+    padding: 80px 40px;
+  }
+
+  .section-inner {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: var(--green);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .section-title {
+    font-family: 'Noto Serif KR', serif;
+    font-size: clamp(22px, 3vw, 32px);
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 24px;
+    word-break: keep-all;
+  }
+
+  .section-body {
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.9;
+    word-break: keep-all;
+  }
+
+  .section-body strong { color: var(--text); }
+
+  /* ── 중간 소개 섹션 ── */
+  .intro-section {
+    background: var(--bg2);
+  }
+
+  /* ── 목차 섹션 ── */
+  .toc-section {
+    background: var(--bg3);
+  }
+
+  .toc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    margin-top: 48px;
+    text-align: left;
+  }
+
+  .toc-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 24px;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .toc-card:hover {
+    border-color: rgba(46,204,113,0.3);
+    background: rgba(46,204,113,0.04);
+  }
+
+  .toc-num {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--green);
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+  }
+  .toc-card-title {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .toc-card-desc {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    word-break: keep-all;
+  }
+
+  /* ── 전자책 / 컨설팅 CTA 섹션 ── */
+  .cta-section {
+    background: var(--bg2);
+  }
+
+  .cta-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 48px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 32px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .cta-card:hover {
+    border-color: rgba(46,204,113,0.35);
+    transform: translateY(-4px);
+  }
+
+  .cta-card-icon {
+    width: 56px;
+    height: 56px;
+    background: var(--green-glow);
+    border: 1px solid rgba(46,204,113,0.25);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+  }
+
+  .cta-card-title {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 19px;
+    font-weight: 700;
+  }
+
+  .cta-card-desc {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.8;
+    word-break: keep-all;
+  }
+
+  /* ── 안내 메시지 섹션 ── */
+  .notice-section {
+    background: var(--bg);
+    text-align: center;
+    padding: 60px 40px;
+  }
+
+  .notice-box {
+    max-width: 640px;
+    margin: 0 auto;
+    border: 1px solid rgba(46,204,113,0.2);
+    border-radius: 10px;
+    padding: 36px 40px;
+    background: rgba(46,204,113,0.04);
+    line-height: 1.9;
+    font-size: 14.5px;
+    color: var(--text-muted);
+    word-break: keep-all;
+  }
+
+  .notice-box strong { color: var(--text); }
+
+  .notice-box p + p {
+    margin-top: 12px;
+  }
+
+  /* ── 푸터 ── */
+  footer {
+    background: #111510;
+    padding: 40px 40px 32px;
+    text-align: center;
+    border-top: 1px solid var(--border);
+  }
+
+  .footer-brand {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 20px;
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+  }
+
+  .footer-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--green); }
+
+  .footer-copy {
+    font-size: 12px;
+    color: #555;
+  }
+
+  /* ── 반응형 ── */
+  @media (max-width: 800px) {
+    .hero-inner {
+      grid-template-columns: 1fr;
+      padding: 60px 24px;
+      gap: 48px;
+    }
+    .pdf-preview {
+      transform: none;
+      max-width: 360px;
+      margin: 0 auto;
+    }
+    section { padding: 60px 24px; }
+    .cta-cards { grid-template-columns: 1fr; }
+    .toc-grid { grid-template-columns: 1fr; }
+    .notice-box { padding: 28px 24px; }
+  }
+
+  /* ── 애니메이션 ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-text > * {
+    animation: fadeUp 0.7s ease both;
+  }
+  .hero-eyebrow { animation-delay: 0.05s; }
+  .hero-title   { animation-delay: 0.15s; }
+  .hero-body    { animation-delay: 0.25s; }
+  .btn-group    { animation-delay: 0.35s; }
+
+  .hero-card {
+    animation: fadeUp 0.8s 0.2s ease both;
+  }
+</style>
+</head>
+<body>
+
+<!-- 상단 배너 -->
+<div class="top-banner">
+  책방/독립서점/북카페 창업 및 운영 &lt;책방학개론&gt; PDF 무료로 받기
+</div>
+
+<!-- 히어로 섹션 -->
+<section class="hero">
+  <div class="hero-inner">
+
+    <!-- 왼쪽: 텍스트 + 버튼 -->
+    <div class="hero-text">
+      <span class="hero-eyebrow">더페이지솔루션 · 무료 전자책</span>
+
+      <h1 class="hero-title">
+        독립서점, 책방, 북카페 운영에<br>
+        <span class="em">관심있는 사람이 아니라면,</span><br>
+        사이트를 바로 닫아주세요.
+      </h1>
+
+      <p class="hero-body">
+        <strong>&lt;책방학개론&gt;</strong>을 읽어도 충분합니다.<br>
+        다만, 더 많은 정보를 원할 경우에는 아래의 전자책을 구매해 읽어보시기 바랍니다.<br><br>
+        컨설팅을 받는 것이 가장 좋지만, 비용이 고가이기 때문에<br>
+        되도록 전자책으로 비법을 전수받으시는 것을 추천합니다.<br><br>
+        전자책들을 읽고 난 후에도 도움이 필요한 경우에만 컨설팅을 신청해주십시오.
+      </p>
+
+      <div class="btn-group">
+        <a href="bookshop-guide.pdf" download class="btn btn-primary">
+          📄 PDF 다운받기
+        </a>
+        <a href="https://kmong.com/gig/484403?selfMarketingCode=2LIh3C6oeo" target="_blank" rel="noopener" class="btn btn-secondary">
+          📚 전자책 읽어보기
+        </a>
+        <a href="https://kmong.com/gig/505288" target="_blank" rel="noopener" class="btn btn-outline">
+          🤝 컨설팅 신청하기
+        </a>
+      </div>
+    </div>
+
+    <!-- 오른쪽: PDF 미리보기 카드 -->
+    <div class="hero-card">
+      <div class="pdf-preview">
+        <div class="pdf-header">
+          <div class="pdf-left">
+            <div class="pdf-title-ko">책방학개론 Rev 1.0</div>
+            <div class="pdf-subtitle">
+              책방이 무엇인지, 무엇부터 해야 할지<br>
+              방향성을 잡아야 할 때 펼쳐봐야 할 노하우<br>
+              (한 권으로 책방운영스킬 두단계 업그레이드하기)
+            </div>
+            <div class="pdf-bookstore-img">
+              <div class="pdf-bookstore-inner">
+                <div style="font-size:32px; margin-bottom:4px;">📚</div>
+                <div style="font-size:10px;">Local Bookshop</div>
+              </div>
+            </div>
+          </div>
+          <div class="pdf-right">
+            <div class="pdf-toc-title">목차</div>
+            <ul class="pdf-toc-list">
+              <li><span>1. 책방의 의미</span><span class="pg">5</span></li>
+              <li><span>2. 손님이 원하는 책방</span><span class="pg">5</span></li>
+              <li><span>3. 살아남는 책방</span><span class="pg">10</span></li>
+              <li><span>4. 책방의 한계</span><span class="pg">13</span></li>
+              <li><span>5. 그럼에도 불구하고</span><span class="pg">14</span></li>
+              <li><span>[보너스] 실제 Q&amp;A</span><span class="pg">20</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="pdf-footer">
+          본 문서의 저작권은 '더페이지솔루션'에게 있습니다. 무단 도용, 복제 및 사용을 금지하며,<br>
+          저작권자의 허락없이 무단 사용시에 관계 법령에 의거하여 처벌받을 수 있습니다.<br>
+          Copyright© 더페이지솔루션. All rights reserved.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- 소개 섹션 -->
+<section class="intro-section">
+  <div class="section-inner">
+    <p class="section-label">About</p>
+    <h2 class="section-title">
+      "경제적인 이유로 문을 닫는 책방이 없는 그날까지"
+    </h2>
+    <p class="section-body">
+      더페이지솔루션은 책방 운영을 직접 경험한 대표가 만든 <strong>책방 전문 컨설팅 브랜드</strong>입니다.<br>
+      단순히 책을 파는 공간이 아닌, <strong>브랜드를 만드는 곳</strong>으로서의 책방.<br>
+      그 철학과 생존 전략을 이 무료 PDF에 담았습니다.
+    </p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- 목차 섹션 -->
+<section class="toc-section">
+  <div class="section-inner">
+    <p class="section-label">Contents</p>
+    <h2 class="section-title">이 PDF 한 권에<br>책방 생존 전략이 다 담겨 있습니다</h2>
+  </div>
+  <div class="toc-grid" style="max-width:900px; margin: 48px auto 0;">
+    <div class="toc-card">
+      <div class="toc-num">01</div>
+      <div class="toc-card-title">책방의 의미</div>
+      <div class="toc-card-desc">독립서점이란 무엇인지, 단순한 책 판매 공간을 넘어 '브랜드'로 정의해야 하는 이유를 설명합니다.</div>
+    </div>
+    <div class="toc-card">
+      <div class="toc-num">02</div>
+      <div class="toc-card-title">손님이 원하는 책방</div>
+      <div class="toc-card-desc">사랑받는 책방 리뷰 분석을 통해 고객이 실제로 원하는 것이 무엇인지 파악합니다.</div>
+    </div>
+    <div class="toc-card">
+      <div class="toc-num">03</div>
+      <div class="toc-card-title">살아남는 책방</div>
+      <div class="toc-card-desc">팬덤 형성, 지역 콜라보, 북클럽, 샵인샵 등 지속 가능한 운영 전략을 소개합니다.</div>
+    </div>
+    <div class="toc-card">
+      <div class="toc-num">04</div>
+      <div class="toc-card-title">책방의 한계</div>
+      <div class="toc-card-desc">1인 운영의 현실적 한계와 정보 비대칭 문제, 마진 구조의 어려움을 솔직하게 짚습니다.</div>
+    </div>
+    <div class="toc-card">
+      <div class="toc-num">05</div>
+      <div class="toc-card-title">그럼에도 불구하고</div>
+      <div class="toc-card-desc">유튜브·블로그 활용, 추천 도서 목록, 세미나 참석, 퍼스널 브랜딩까지 7가지 극복 방안을 제시합니다.</div>
+    </div>
+    <div class="toc-card">
+      <div class="toc-num">보너스</div>
+      <div class="toc-card-title">실제 구독자 Q&amp;A</div>
+      <div class="toc-card-desc">독립 서적 위탁 방법, DM 작성 사례 등 현장 질문과 상세한 답변을 수록했습니다.</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- 전자책 / 컨설팅 CTA -->
+<section class="cta-section">
+  <div class="section-inner">
+    <p class="section-label">Next Step</p>
+    <h2 class="section-title">더 깊은 노하우가 필요하다면</h2>
+    <p class="section-body">무료 PDF로 방향을 잡은 후, 다음 단계를 선택하세요.</p>
+  </div>
+  <div class="cta-cards">
+    <div class="cta-card">
+      <div class="cta-card-icon">📖</div>
+      <div class="cta-card-title">전자책 읽어보기</div>
+      <div class="cta-card-desc">
+        책방 운영 노하우 30가지를 담은 전자책.<br>
+        컨설팅보다 저렴하게, 핵심만 빠르게.
+      </div>
+      <a href="https://kmong.com/gig/484403?selfMarketingCode=2LIh3C6oeo" target="_blank" rel="noopener" class="btn btn-primary" style="width:100%; margin-top:8px;">
+        크몽에서 보기 →
+      </a>
+    </div>
+    <div class="cta-card">
+      <div class="cta-card-icon">💬</div>
+      <div class="cta-card-title">컨설팅 신청하기</div>
+      <div class="cta-card-desc">
+        전자책을 읽고도 궁금한 점이 남았다면<br>
+        1:1 맞춤 컨설팅을 신청해 주세요.
+      </div>
+      <a href="https://kmong.com/gig/505288" target="_blank" rel="noopener" class="btn btn-outline" style="width:100%; margin-top:8px;">
+        컨설팅 신청 →
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- 안내 박스 -->
+<section class="notice-section">
+  <div class="notice-box">
+    <p>
+      <strong>&lt;책방학개론&gt;</strong>을 읽어도 충분합니다.<br>
+      다만, 더 많은 정보를 원할 경우에는 아래의 전자책을 구매해 읽어보시기 바랍니다.
+    </p>
+    <p>
+      컨설팅을 받는 것이 가장 좋지만, 비용이 고가이기 때문에<br>
+      되도록 전자책으로 비법을 전수받으시는 것을 추천합니다.
+    </p>
+    <p style="margin-top: 24px;">
+      <a href="bookshop-guide.pdf" download class="btn btn-primary" style="display:inline-flex; width:auto; padding: 14px 32px;">
+        📄 PDF 무료로 받기
+      </a>
+    </p>
+  </div>
+</section>
+
+<!-- 푸터 -->
+<footer>
+  <div class="footer-brand">더페이지솔루션</div>
+  <div class="footer-links">
+    <a href="https://www.instagram.com/booksslow/" target="_blank" rel="noopener">📷 인스타그램</a>
+    <a href="https://blog.naver.com/thepagesolution" target="_blank" rel="noopener">📝 네이버 블로그</a>
+    <a href="https://kmong.com/gig/484403?selfMarketingCode=2LIh3C6oeo" target="_blank" rel="noopener">📚 전자책 구매</a>
+    <a href="https://kmong.com/gig/505288" target="_blank" rel="noopener">🤝 컨설팅 신청</a>
+  </div>
+  <div class="footer-copy">Copyright © 2026 책방창업 무료전자책 신청 All rights reserved.</div>
+</footer>
+
+</body>
+</html>
